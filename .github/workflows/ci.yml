@@ -18,4 +18,4 @@ jobs:
         run: ./hello.sh
 
       - name: Run test
-        run: test -x hello.sh
+        run: test -x missing.sh
