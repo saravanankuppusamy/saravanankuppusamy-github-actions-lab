@@ -1,0 +1,21 @@
+name: CI Lab
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: test
+    runs-on: self-hosted
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Run application
+        run: ./hello.sh
+
+      - name: Run test
+        run: test -x hello.sh
